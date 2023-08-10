@@ -87,5 +87,12 @@ function loadAAMPVideo() {
 
 // Trigger the function when the video container is clicked
 var videoContainer = document.getElementById("video-card-container");
-videoContainer.addEventListener("click", loadAAMPVideo);
+// videoContainer.addEventListener("click", loadAAMPVideo);
+
+videoContainer.addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    // Enter key
+    loadAAMPVideo();
+  }
+});
 
