@@ -71,7 +71,7 @@ function loadAAMPVideo() {
   var video = document.getElementById("videoPlayer");
   video.src = url;
   video.play();
-  video.style.display = "block";
+  // video.style.display = "block";
 
   // Request full screen for the video element
   if (video.requestFullscreen) {
