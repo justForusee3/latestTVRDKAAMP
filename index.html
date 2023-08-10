@@ -80,6 +80,9 @@
 
     <script>
         var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
+         window.onload = function() {
+            player = new AAMPMediaPlayer();
+        }
 
         function loadAAMPVideo() {
             var video = document.getElementById("videoPlayer");
@@ -87,20 +90,20 @@
             video.play();
 
             // Wait for the video to load
-            video.addEventListener('loadedmetadata', function() {
-                // Request full screen for the video element
-                if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.mozRequestFullScreen) { // Firefox
-                    video.mozRequestFullScreen();
-                } else if (video.webkitRequestFullscreen) { // WebKit browsers (e.g., Chrome, Safari)
-                    video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) { // IE/Edge
-                    video.msRequestFullscreen();
-                }
-                videoContainer.style.display = "none";
-            });
-        }
+        //     video.addEventListener('loadedmetadata', function() {
+        //         // Request full screen for the video element
+        //         if (video.requestFullscreen) {
+        //             video.requestFullscreen();
+        //         } else if (video.mozRequestFullScreen) { // Firefox
+        //             video.mozRequestFullScreen();
+        //         } else if (video.webkitRequestFullscreen) { // WebKit browsers (e.g., Chrome, Safari)
+        //             video.webkitRequestFullscreen();
+        //         } else if (video.msRequestFullscreen) { // IE/Edge
+        //             video.msRequestFullscreen();
+        //         }
+        //         videoContainer.style.display = "none";
+        //     });
+        // }
 
         document.addEventListener("keydown", function (event) {
             if (event.keyCode === 13) {
