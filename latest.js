@@ -86,6 +86,6 @@ function loadAAMPVideo() {
 }
 
 // Trigger the function when the video container is clicked
-var videoContainer = document.getElementById("videoContainer");
+var videoContainer = document.getElementById("video-card-container");
 videoContainer.addEventListener("click", loadAAMPVideo);
 
