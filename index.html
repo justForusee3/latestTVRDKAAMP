@@ -65,8 +65,7 @@
     </div>
  -->
     
-    <!-- Your video card container -->
-    <div class="video-card-container" id="videoContainer">
+     <div class="video-card-container" id="videoContainer">
         <div class="video-card video-container">
             <video
                 id="videoPlayer"
@@ -79,7 +78,6 @@
 
 
 
-    
     <script>
         var url = "aamps://dash.akamaized.net/dash264/TestCasesMCA/dolby/3/1/ChID_voices_20_128_ddp.mpd";
 
@@ -87,18 +85,20 @@
             var video = document.getElementById("videoPlayer");
             video.src = url;
             video.play();
-            video.style.display = "block";
 
-            // Request full screen for the video element
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // WebKit browsers (e.g., Chrome, Safari)
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
+            // Wait for the video to load
+            video.addEventListener('loadedmetadata', function() {
+                // Request full screen for the video element
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) { // Firefox
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) { // WebKit browsers (e.g., Chrome, Safari)
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) { // IE/Edge
+                    video.msRequestFullscreen();
+                }
+            });
         }
 
         document.addEventListener("keydown", function (event) {
