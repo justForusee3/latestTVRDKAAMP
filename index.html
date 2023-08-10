@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RDK TV UI</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+<!--     <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script> -->
 
 </head>
 <body>
@@ -67,11 +67,7 @@
     
      <div class="video-card-container" id="videoContainer">
         <div class="video-card video-container">
-            <video
-                id="videoPlayer"
-                class="dash-video"
-                controls>
-            </video>
+            <video id="videoPlayer" class="dash-video" style="height:100%; width:100%; position:absolute; controls></video>
             <button id="playButton" class="play-button">Play</button>
         </div>
     </div>
